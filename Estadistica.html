@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            font-size: 24px;
+            border-bottom: 2px solid #388E3C;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .justificado {
+            background-color: #8eff8e;
+        }
+
+        .falta {
+            background-color: #ff8e8e;
+        }
+
+        .retardo {
+            background-color: #ffcc8e;
+        }
+
+        .registrado {
+            background-color: #a0a0a0;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+
+        .action-button {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .justificar-btn {
+            background-color: #4CAF50;
+        }
+
+        .falta-btn {
+            background-color: #FF4F4F;
+        }
+
+        .retardo-btn {
+            background-color: #FFA500;
+        }
+
+        .registrar-btn {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>Registro de Asistencia</header>
+
+        <table>
+            <tr>
+                <th>Maestro</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+                <th>Asistencia</th>
+            </tr>
+            <tr>
+                <td>Maestro 1</td>
+                <td id="estado-maestro-1"></td>
+                <td class="action-buttons">
+                    <button class="action-button justificar-btn" onclick="confirmarAsistencia('estado-maestro-1', 'justificado')">Justificar</button>
+                    <button class="action-button falta-btn" onclick="confirmarAsistencia('estado-maestro-1', 'falta')">Falta</button>
+                    <button class="action-button retardo-btn" onclick="confirmarAsistencia('estado-maestro-1', 'retardo')">Retardo</button>
+                </td>
+                <td class="action-buttons">
+                    <button class="action-button registrar-btn" onclick="confirmarAsistencia('estado-maestro-1', 'registrado')">Registrar</button>
+                </td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </table>
+    </div>
+
+    <script>
+        function confirmarAsistencia(id, estado) {
+            var estadoElement = document.getElementById(id);
+
+            if (estadoElement.classList.contains('registrado')) {
+                alert('Este maestro ya ha sido registrado.');
+            } else {
+                var confirmacion = confirm('¿Estás seguro de registrar la asistencia?');
+
+                if (confirmacion) {
+                    estadoElement.innerText = estado.charAt(0).toUpperCase() + estado.slice(1);
+                    estadoElement.className = estado;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

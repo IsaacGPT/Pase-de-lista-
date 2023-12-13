@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Profesores de la carrera Sistemas Computacionales</title>
+
+    <!-- Agrega Bootstrap desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsVxkgFmZA5ePzI8rWI4c8yQV/3DIIJibf0nS9VB6B" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-eW8+8k0Tl3Q18IGNFzF5Id2Z/uJfnIbVfS3ib5S13nqJ0IpeF0O9qZuJl3kWRR8D" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #contenedor-principal {
+            margin-top: 20px;
+        }
+
+        #resumen-asistencia {
+            text-align: left;
+        }
+
+        #botones-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            margin: 5px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+        #tabla-asistencia {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #cuerpo-tabla {
+            font-size: 14px;
+        }
+
+        #estadisticas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Profesores de la carrera Sistemas Computacionales</h1>
+
+    <div id="contenedor-principal">
+        <!-- Resumen de asistencia -->
+        <div id="resumen-asistencia">
+            <h3>Resumen de Asistencia</h3>
+            <p id="profesor-asistencia"></p>
+            <p id="total-asistencias"></p>
+            <p id="total-faltas"></p>
+        </div>
+
+        <!-- Botones de profesores -->
+        <div id="botones-container">
+            <button onclick="mostrarInformacion('Profesor 1')">Profesor 1</button>
+            <button onclick="mostrarInformacion('Profesor 2')">Profesor 2</button>
+            <button onclick="mostrarInformacion('Profesor 3')">Profesor 3</button>
+            <button onclick="mostrarInformacion('Profesor 4')">Profesor 4</button>
+            <button onclick="mostrarInformacion('Profesor 5')">Profesor 5</button>
+            <button onclick="mostrarInformacion('Profesor 6')">Profesor 6</button>
+            <button onclick="mostrarInformacion('Profesor 7')">Profesor 7</button>
+            <button onclick="mostrarInformacion('Profesor 8')">Profesor 8</button>
+            <button onclick="mostrarInformacion('Profesor 9')">Profesor 9</button>
+            <button onclick="mostrarInformacion('Profesor 10')">Profesor 10</button>
+        </div>
+
+        <!-- Tabla de asistencia -->
+        <table id="tabla-asistencia" class="table table-bordered">
+            <thead class="bg-success text-white">
+                <tr>
+                    <th>Semana</th>
+                    <th>Día</th>
+                    <th>Asistencia</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+                <!-- Contenido de la tabla generado dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Gráficas de estadísticas -->
+        <div id="estadisticas-container">
+            <canvas id="grafica-asistencias"></canvas>
+            <canvas id="grafica-faltas"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Tu código JavaScript existente sigue aquí
+</script>
+
+</body>
+</html>

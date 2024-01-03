@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        header {
+            background-color: #007bff; /* Azul */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            font-size: 24px;
+            border-bottom: 2px solid #0056b3; /* Tono más oscuro de azul */
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        label {
+            color: #007bff; /* Azul para etiquetas */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cambia el tono de azul al pasar el ratón */
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-white">Inicio de Sesión</header>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipoUsuario" class="form-label">Tipo de Usuario:</label>
+                <select class="form-select" id="tipoUsuario" name="tipoUsuario">
+                    <option value="prefecto">Prefecto</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="coordinador">Coordinador</option>
+                    <option value="recursosHumanos">Recursos Humanos</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="iniciarSesion()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            // Lógica de autenticación simulada
+            // Redirigir a la página de carreras si la autenticación es exitosa
+            window.location.href = 'Carreras.html';
+        }
+    </script>
+</body>
+
+</html>
+

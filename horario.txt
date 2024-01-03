@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario del Profesor 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Horario del Profesor 1</h2>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <td>08:00 - 09:00</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 1</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 13</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 2</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 3</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 14</td>
+        </tr>
+        <tr>
+            <td>09:00 - 10:00</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 4</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 15</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 5</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 6</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 16</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 7</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 17</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 8</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 9</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 18</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 10</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 19</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 11</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 20</td>
+            <td style="background-color: #3498db; color: #fff;">Clase 12</td>
+        </tr>
+        <!-- Puedes seguir agregando más filas y clases según sea necesario -->
+    </table>
+
+</body>
+</html>
+
+
+
+
+  
